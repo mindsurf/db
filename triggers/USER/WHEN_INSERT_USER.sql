@@ -1,0 +1,16 @@
+DROP TRIGGER IF EXISTS mindsurf.WHEN_INSERT_USER;
+
+DELIMITER //
+
+CREATE TRIGGER mindsurf.WHEN_INSERT_USER AFTER INSERT ON mindsurf.USER
+
+FOR EACH ROW
+
+BEGIN
+
+INSERT INTO mindsurf.TAG ( user_id , color , tag )
+VALUES ( NEW.id , "#B0B0B0" , "default" );
+
+END //
+
+DELIMITER ;
