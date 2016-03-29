@@ -20,4 +20,3 @@ SELECT id, email, authorname
 END //
 
 DELIMITER ;
-

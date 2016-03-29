@@ -12,7 +12,7 @@ BEGIN
 SELECT id, email, authorname
     FROM mindsurf.USER
     WHERE USER.email=email;
-    
+
 END //
 
 DELIMITER ;
