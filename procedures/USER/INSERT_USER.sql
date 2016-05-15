@@ -4,16 +4,15 @@ DELIMITER //
 
 CREATE PROCEDURE mindsurf.INSERT_USER
 (
-    IN email VARCHAR(45),
-    IN authorname VARCHAR(45)
+    IN email VARCHAR(45)
 )
 
 BEGIN
 
-INSERT INTO mindsurf.USER ( email, authorname )
-    VALUES ( email, authorname );
+INSERT INTO mindsurf.USER ( email )
+    VALUES ( email );
 
-SELECT id, email, authorname
+SELECT id, email, authorname, state
     FROM mindsurf.USER
     WHERE USER.email=email;
 

@@ -9,7 +9,7 @@ CREATE PROCEDURE mindsurf.SELECT_USER
 
 BEGIN
 
-SELECT id, email, authorname
+SELECT id, email, authorname, state
     FROM mindsurf.USER
     WHERE USER.email=email;
 
